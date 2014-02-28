@@ -202,7 +202,7 @@ function session(options){
 
   // generates the new session
   store.generate = function(req){
-    req.sessionID = uid(24);
+    req.sessionID = uid(26);
     req.session = new Session(req);
     req.session.cookie = new Cookie(cookie);
   };
@@ -242,9 +242,10 @@ function session(options){
     var unsignedCookie = req.signedCookies[key];
 
     if (!unsignedCookie && rawCookie) {
-      unsignedCookie = (0 == rawCookie.indexOf('s:'))
-        ? signature.unsign(rawCookie.slice(2), secret)
-        : rawCookie;
+      // unsignedCookie = (0 == rawCookie.indexOf('s:'))
+      //   ? signature.unsign(rawCookie.slice(2), secret)
+      //   : rawCookie;
+      unsignedCookie = rawCookie;
     }
 
     // set-cookie
@@ -287,7 +288,8 @@ function session(options){
 
       }
 
-      var val = 's:' + signature.sign(req.sessionID, secret);
+      //var val = 's:' + signature.sign(req.sessionID, secret);
+      var val = req.sessionID;
       val = cookie.serialize(key, val);
       debug('set-cookie %s', val);
       res.setHeader('Set-Cookie', val);

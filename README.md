@@ -1,4 +1,6 @@
-# express-session
+# onesession
+** it fork from [session](https://github.com/expressjs/session) ** and i delete the session signature to 
+compatible with the php session handler
 
 Setup session store with the given `options`.
 
@@ -10,7 +12,7 @@ middleware _before_ `session()`.
 
 ```js
  app.use(connect.cookieParser())
- app.use(connect.session({ secret: 'keyboard cat', key: 'sid', cookie: { secure: true }}))
+ app.use(onesession({ secret: 'keyboard cat', key: 'sid', cookie: { secure: true }}))
 ```
 
 **Options**
@@ -35,7 +37,7 @@ are typically fine. For example below is a user-specific view counter:
 
 ```js
 app.use(cookieParser())
-app.use(session({ secret: 'keyboard cat', cookie: { maxAge: 60000 }}))
+app.use(onesession({ secret: 'keyboard cat', cookie: { maxAge: 60000 }}))
 
 app.use(function(req, res, next){
   var sess = req.session;

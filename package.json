@@ -1,8 +1,12 @@
 {
-  "name": "express-session",
-  "version": "1.0.2",
-  "author": "TJ Holowaychuk <tj@vision-media.ca> (http://tjholowaychuk.com)",
+  "name": "onesession",
+  "version": "1.0.0",
+  "author": "iflamed <iflamed@gmail.com> (http://oxkiller.ruobiyi.com)",
   "main": "./index.js",
+  "repository": {
+    "type":"git",
+    "url":"https://github.com/iflamed/session"
+  },
   "dependencies": {
     "utils-merge": "1.0.0",
     "cookie": "0.1.0",

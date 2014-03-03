@@ -1,6 +1,6 @@
 {
   "name": "onesession",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "iflamed <iflamed@gmail.com> (http://oxkiller.ruobiyi.com)",
   "description":"A session solution for mult language development,it support the php session and others.",
   "main": "./index.js",

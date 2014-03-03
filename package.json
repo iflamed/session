@@ -2,10 +2,12 @@
   "name": "onesession",
   "version": "1.0.0",
   "author": "iflamed <iflamed@gmail.com> (http://oxkiller.ruobiyi.com)",
+  "description":"A session solution for mult language development,it support the php session and others.",
   "main": "./index.js",
+  "homepage":"https://github.com/iflamed/session",
   "repository": {
     "type":"git",
-    "url":"https://github.com/iflamed/session"
+    "url":"git@github.com:iflamed/session.git"
   },
   "dependencies": {
     "utils-merge": "1.0.0",
